@@ -25,6 +25,11 @@
   src: url(../../assets/fonts/Courgette/courgette-v17-latin-regular.woff2) format('woff2');
 }
 
+@font-face {
+  font-family: "Font Awesome 6 Free";
+  src: url(../../assets/webfonts/fa-solid-900.woff2) format("woff2");
+}
+
 body {
   color: #333;
   font-family: 'Source Sans 3';
