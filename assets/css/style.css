@@ -27,6 +27,7 @@
 
 @font-face {
   font-family: "Font Awesome 6 Free";
+  font-display: swap;
   src: url(../../assets/webfonts/fa-solid-900.woff2) format("woff2");
 }
 
@@ -157,13 +158,13 @@ a:hover, a:focus {
 .loadder {
   z-index: 1000;
 }
-.social-icons .facebook {
+.social-icons a.facebook {
     background: #3B5998;
 }
-.social-icons .yelp {
+.social-icons a.yelp {
     background: #C41200;
 }
-.social-icons .google {
+.social-icons a.google {
     background: #4687f4;
 }
 .social-icons a {
@@ -182,14 +183,14 @@ a:hover, a:focus {
 .social-icons a:hover {
   background: #ffffff;
 }
-.social-icons .google:hover {
-    color: #337EF2;
+.social-icons .google:hover path {
+    fill: #337EF2;
 }
-.social-icons .yelp:hover {
-    color: #C41200;
+.social-icons .yelp:hover path {
+    fill: #C41200;
 }
-.social-icons .facebook:hover {
-    color: #3B5998;
+.social-icons .facebook:hover path {
+    fill: #3B5998;
 }
 .header-area .navbar {
     border-top: solid 1px rgba(255, 255, 255, 0.5);
@@ -281,7 +282,8 @@ a:hover, a:focus {
 .header-bottombare .inner-services .report-payment ul li a {
     transition: all .3s;
 }
-.header-bottombare .inner-services .report-payment ul li > a i {
+.header-bottombare .inner-services .report-payment ul li > a i,
+.header-bottombare .inner-services .report-payment ul li > a svg {
     font-size: 74px;
     position: absolute;
     top: 30px;
@@ -294,7 +296,7 @@ a:hover, a:focus {
     -khtml-opacity: 0.1;
     opacity: 0.1;
 }
-.header-bottombare .inner-services .report-payment ul li:hover > a i {
+.header-bottombare .inner-services .report-payment ul li:hover > a svg {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
     filter: alpha(opacity = 20);
     -moz-opacity: 0.2;
@@ -310,12 +312,14 @@ a:hover, a:focus {
 .header-bottombare .inner-services .report-payment ul li:hover p a {
     padding-left: 10%;
 }
-.header-bottombare .inner-services .report-payment ul li p a:before {
-    content: "\f138";
-    font-family: 'FontAwesome';
-    display: inline-block;
-    margin-right: 6px;
-    font-size: 22px;
+.header-bottombare .inner-services .report-payment ul li p a svg {
+    transform: translateX(-6px);
+}
+.reviewRating {
+  margin-top: -6px;
+  display: flex;
+  align-items: center;
+  gap: 0px;
 }
 .phone-number-area .lead {
     color: #fff;
@@ -459,9 +463,9 @@ a:hover, a:focus {
 .icons-card .card a:hover, .icons-card .card a:active, .icons-card .card a:focus {
   color: var(--secondary-color) !important;
 }
-.icons-card .card a i {
-    font-size: 48px;
-    padding-bottom: 6px;
+.icons-card .card a:hover svg path {
+  transition: all 0.3s;
+    fill: #ff8040
 }
 
 /*Why Section*/
