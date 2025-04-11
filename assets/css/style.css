@@ -419,9 +419,9 @@ a:hover, a:focus {
 }
 @media screen and (max-width: 767px) {
   
-  .banner{
+  /* .banner{
     background-attachment: local !important;
-  }
+  } */
 
   .card:not(:first-child) {
     display: none;
